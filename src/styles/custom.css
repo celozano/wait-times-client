@@ -1,0 +1,127 @@
+body {
+  font-family: "Rubik", sans-serif;
+  font-weight: 500;
+  background: #fed65e;
+}
+
+ul {
+  padding-inline-start: 0px;
+}
+
+.low {
+  color: #00b909;
+}
+
+.mid {
+  color: #d3b53d;
+}
+
+.high {
+  color: #dc322f;
+}
+
+.na {
+  text-decoration-line: line-through;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.animated-background {
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  position: relative;
+  background-size: 800px 104px;
+}
+
+.background-masker {
+  background: #fff;
+  position: absolute;
+}
+
+.background-masker.content-first,
+.background-masker.content-second,
+.background-masker.content-third,
+.background-masker.content-fourth,
+.background-masker.content-fifth {
+  left: 0;
+  right: 0;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 991px) {
+  .animated-background {
+    height: 327px;
+  }
+
+  .background-masker.content-first {
+    top: 43px;
+    height: 40px;
+  }
+
+  .background-masker.content-second {
+    top: 100px;
+    height: 20px;
+  }
+
+  .background-masker.content-third {
+    top: 180px;
+    height: 27px;
+  }
+
+  .background-masker.content-fourth {
+    top: 225px;
+    height: 20px;
+  }
+
+  .background-masker.content-fifth {
+    top: 305px;
+    height: 25px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 0.9rem;
+  }
+
+  .animated-background {
+    height: 290px;
+  }
+
+  .background-masker.content-first {
+    top: 40px;
+    height: 35px;
+  }
+
+  .background-masker.content-second {
+    top: 90px;
+    height: 18px;
+  }
+
+  .background-masker.content-third {
+    top: 160px;
+    height: 24px;
+  }
+
+  .background-masker.content-fourth {
+    top: 199px;
+    height: 18px;
+  }
+
+  .background-masker.content-fifth {
+    top: 270px;
+    height: 20px;
+  }
+}
